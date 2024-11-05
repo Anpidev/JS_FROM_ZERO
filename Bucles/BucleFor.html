@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For</title>
+</head>
+<body>
+    <script>
+        let numero = parseInt(prompt("Introduzca un número entero"), 10);
+        let resultado = 1; // Inicializar el resultado en 1
+
+        // Asegurarse de que el número sea no negativo
+        if (numero < 0) {
+            document.write("El factorial no está definido para números negativos.");
+        } else {
+            for (let index = 1; index <= numero; index++) {
+                resultado *= index; // Multiplicar el resultado por el índice
+            }
+            document.write("El factorial de " + numero + " es " + resultado);
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+  </head>
+
+  <body>
+    <script>
+      let code = window.prompt(
+        "Descripción del código de clima (del 1 al 6 , inclusive)",
+        "Ingrese del 1 al 6"
+      );
+      switch (code) {
+        case "1":
+          document.write("1: Día soleado");
+
+          break;
+        case "2":
+          document.write("2: Parcialmente nublado");
+          break;
+        case "3":
+          document.write("3: Mayormente nublado");
+          break;
+        case "4":
+          document.write("4: Lluvioso");
+          break;
+        case "5":
+          document.write("5: Nieve");
+          break;
+        case "6":
+          document.write("6: Tormenta");
+          break;
+
+        default:
+          document.write("Código ingresado no válido");
+          break;
+      }
+    </script>
+  </body>
+</html>

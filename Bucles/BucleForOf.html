@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucle For Of</title>
+</head>
+<body>
+    <script>
+        // Inicializar el array con una longitud de 5
+        let array = new Array(5);
+        
+        // Llenar el array con números ingresados por el usuario
+        for (let index = 0; index < 5; index++) {
+            let numero = parseInt(prompt("Introduzca un número"), 10);
+            // Verificar si la entrada es un número
+            if (!isNaN(numero)) {
+                array[index] = numero;
+            } else {
+                alert("Por favor, introduzca un número válido.");
+                index--; // Repetir el índice actual si la entrada no es válida
+            }
+        }
+
+        // Mostrar los resultados de multiplicar los números por cinco
+        document.write("El resultado de multiplicar los números por cinco es: <br>");
+        for (const element of array) {
+            let resultado = element * 5;
+            document.write(element + " x 5 = " + resultado + "<br>");
+        }
+
+    </script>
+</body>
+</html>

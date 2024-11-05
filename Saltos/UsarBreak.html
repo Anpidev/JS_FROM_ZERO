@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Break</title>
+  </head>
+  <body>
+    <script>
+      let num1 = parseInt(prompt("Introduzca el primer número"), 10);
+      let num2 = parseInt(prompt("Introduzca el segundo número"), 10);
+      let contador = 0;
+
+      // Iterar desde num1 hasta num2 (no incluido)
+      for (let index = num1; index < num2; index++) {
+        let esPrimo = true; // Asumimos que el número es primo al principio
+
+        // Comprobar si el número es primo
+        if (index < 2) {
+          esPrimo = false; // Los números menores que 2 no son primos
+        } else {
+          for (let j = 2; j <= Math.sqrt(index); j++) {
+            if (index % j === 0) {
+              esPrimo = false; // Encontramos un divisor, no es primo
+              break;
+            }
+          }
+        }
+
+        // Mostrar si el número es primo o no
+        if (esPrimo) {
+          document.write("El número " + index + " es primo.<br>");
+        } else {
+          document.write("El número " + index + " no es primo.<br>");
+        }
+
+        contador++; // Incrementar el contador
+
+        // Romper el bucle después de 3 números
+        if (contador === 3) {
+          break;
+        }
+      }
+    </script>
+  </body>
+</html>

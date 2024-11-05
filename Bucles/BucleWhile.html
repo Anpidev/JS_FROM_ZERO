@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While</title>
+  </head>
+  <body>
+    <script>
+      let num_aleatorio = Math.floor(Math.random() * 100) + 1;
+      let contador = 0;
+      let num_introducido;
+
+      while (num_aleatorio !== num_introducido) {
+        num_introducido = parseInt(
+          prompt("Introduzca un número del 1 al 100"),
+          10
+        );
+
+        if (num_introducido < num_aleatorio) {
+          alert("El número es mayor");
+        } else if (num_introducido > num_aleatorio) {
+          alert("El número es menor");
+        } else {
+          document.write(
+            `Enhorabuena, ha acertado en ${contador + 1} intentos.`
+          );
+          break;
+        }
+        contador++;
+      }
+    </script>
+  </body>
+</html>
