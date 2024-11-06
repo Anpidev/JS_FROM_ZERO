@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+    <script>
+        //EN JS se usan prototipos no clases como JAVA
+        //Declaración y asignación de propiedades al objeto coche de forma literal
+        let coche={ color:"Rojo", potencia:400}; //Prototipo object
+        //Para que salga impreso el color en el navegador
+        document.write(coche.color);
+        //Para que salga que tipo de variable es
+        document.write(coche);
+        //Para que salga por consola y no en el navegador
+        console.log(coche);
+
+        //Creando objeto mediante palabra reservada new
+        let mi_Array= new Array(); //Prototipo array que hereda de Object
+        let mi_Mapa = new Map(); //Prototipo map que también hereda de Object
+
+        //Creando objeto mediante el método create de la "clase" object
+        let moto=Object.create({color:"Negra", potencia:125});
+
+    </script>
+</body>
+</html>
